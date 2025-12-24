@@ -22,10 +22,8 @@ import (
 	"github.com/sacloud/saclient-go"
 )
 
-// DefaultAPIRootURL デフォルトのAPIルートURL
 const DefaultAPIRootURL = "https://secure.sakura.ad.jp/cloud/zone/tk1b/api/cloud/1.0/"
 
-// UserAgent APIリクエスト時のユーザーエージェント
 var UserAgent = fmt.Sprintf(
 	"dedicated-storage-api-go/%s (%s/%s; +https://github.com/sacloud/dedicated-storage-api-go)",
 	Version,
@@ -33,12 +31,10 @@ var UserAgent = fmt.Sprintf(
 	runtime.GOARCH,
 )
 
-// NewClient creates a new workflows API client with default settings
 func NewClient(client saclient.ClientAPI) (*v1.Client, error) {
 	return NewClientWithAPIRootURL(client, DefaultAPIRootURL)
 }
 
-// NewClientWithAPIRootURL creates a new workflows API client with a custom API root URL
 func NewClientWithAPIRootURL(client saclient.ClientAPI, apiRootURL string) (*v1.Client, error) {
 	return v1.NewClient(apiRootURL, v1.WithClient(client))
 }
