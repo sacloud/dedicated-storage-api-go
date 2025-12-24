@@ -1,4 +1,4 @@
-// Copyright 2022-2025 The sacloud/go-template Authors
+// Copyright 2022-2025 The sacloud/dedicated-storage-api-go Authors
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -12,15 +12,21 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package main
+package dedicatedstorage
 
 import (
 	"fmt"
-
-	"github.com/sacloud/go-template/version"
+	"runtime"
 )
 
-func main() {
-	fmt.Println("ALEA IACTA EST")
-	fmt.Println("version", version.FullVersion())
+var (
+	// Version app version
+	Version = "0.0.0"
+	// Revision git commit short commit hash
+	Revision = "xxxxxx" // set on build time
+)
+
+// FullVersion return full version text
+func FullVersion() string {
+	return fmt.Sprintf("v%s %s/%s, build %s", Version, runtime.GOOS, runtime.GOARCH, Revision)
 }

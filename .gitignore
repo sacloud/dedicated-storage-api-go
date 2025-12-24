@@ -2,4 +2,5 @@
 vendor/
 dist/
 work/
-go-template
+dedicated-storage-api-go
+CHANGELOG.md
