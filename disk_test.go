@@ -26,22 +26,22 @@ import (
 )
 
 func TestDisk_SnapShotCRUDL(t *testing.T) {
-	testutil.PreCheckEnvsFunc("SAKURACLOUD_ACCESS_TOKEN", "SAKURACLOUD_ACCESS_TOKEN_SECRET", "SAKURACLOUD_DISK_ID", "SAKURACLOUD_DEDICATED_STORAGE_ID")(t)
+	testutil.PreCheckEnvsFunc("SAKURA_ACCESS_TOKEN", "SAKURA_ACCESS_TOKEN_SECRET", "SAKURA_DISK_ID", "SAKURA_DEDICATED_STORAGE_ID")(t)
 	if os.Getenv("TESTACC") != "1" {
 		t.SkipNow()
 	}
 	ctx := t.Context()
 
 	apiRootURL := DefaultAPIRootURL
-	if os.Getenv("SAKURACLOUD_API_ROOT_URL") != "" {
-		apiRootURL = os.Getenv("SAKURACLOUD_API_ROOT_URL")
+	if os.Getenv("SAKURA_API_ROOT_URL") != "" {
+		apiRootURL = os.Getenv("SAKURA_API_ROOT_URL")
 	}
 
-	diskID, err := strconv.Atoi(os.Getenv("SAKURACLOUD_DISK_ID"))
+	diskID, err := strconv.Atoi(os.Getenv("SAKURA_DISK_ID"))
 	if err != nil {
 		t.Fatal(err)
 	}
-	dedicatedStorageID, err := strconv.Atoi(os.Getenv("SAKURACLOUD_DEDICATED_STORAGE_ID"))
+	dedicatedStorageID, err := strconv.Atoi(os.Getenv("SAKURA_DEDICATED_STORAGE_ID"))
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -165,18 +165,18 @@ func TestDisk_SnapShotCRUDL(t *testing.T) {
 }
 
 func TestDisk_Expand(t *testing.T) {
-	testutil.PreCheckEnvsFunc("SAKURACLOUD_ACCESS_TOKEN", "SAKURACLOUD_ACCESS_TOKEN_SECRET", "SAKURACLOUD_DISK_ID")(t)
+	testutil.PreCheckEnvsFunc("SAKURA_ACCESS_TOKEN", "SAKURA_ACCESS_TOKEN_SECRET", "SAKURA_DISK_ID")(t)
 	if os.Getenv("TESTACC") != "1" {
 		t.SkipNow()
 	}
 	ctx := t.Context()
 
 	apiRootURL := DefaultAPIRootURL
-	if os.Getenv("SAKURACLOUD_API_ROOT_URL") != "" {
-		apiRootURL = os.Getenv("SAKURACLOUD_API_ROOT_URL")
+	if os.Getenv("SAKURA_API_ROOT_URL") != "" {
+		apiRootURL = os.Getenv("SAKURA_API_ROOT_URL")
 	}
 
-	diskID, err := strconv.Atoi(os.Getenv("SAKURACLOUD_DISK_ID"))
+	diskID, err := strconv.Atoi(os.Getenv("SAKURA_DISK_ID"))
 	if err != nil {
 		t.Fatal(err)
 	}

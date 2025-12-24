@@ -25,14 +25,14 @@ import (
 )
 
 func TestContract_CRUDL(t *testing.T) {
-	testutil.PreCheckEnvsFunc("SAKURACLOUD_ACCESS_TOKEN", "SAKURACLOUD_ACCESS_TOKEN_SECRET")(t)
+	testutil.PreCheckEnvsFunc("SAKURA_ACCESS_TOKEN", "SAKURA_ACCESS_TOKEN_SECRET")(t)
 	if os.Getenv("TESTACC") != "1" {
 		t.SkipNow()
 	}
 	ctx := t.Context()
 	apiRootURL := DefaultAPIRootURL
-	if os.Getenv("SAKURACLOUD_API_ROOT_URL") != "" {
-		apiRootURL = os.Getenv("SAKURACLOUD_API_ROOT_URL")
+	if os.Getenv("SAKURA_API_ROOT_URL") != "" {
+		apiRootURL = os.Getenv("SAKURA_API_ROOT_URL")
 	}
 
 	var theClient saclient.Client
@@ -176,7 +176,7 @@ func TestContract_CRUDL(t *testing.T) {
 }
 
 func TestContract_PoolUsage(t *testing.T) {
-	testutil.PreCheckEnvsFunc("SAKURACLOUD_ACCESS_TOKEN", "SAKURACLOUD_ACCESS_TOKEN_SECRET", "SAKURACLOUD_DEDICATED_STORAGE_ID")(t)
+	testutil.PreCheckEnvsFunc("SAKURA_ACCESS_TOKEN", "SAKURA_ACCESS_TOKEN_SECRET", "SAKURA_DEDICATED_STORAGE_ID")(t)
 	if os.Getenv("TESTACC") != "1" {
 		t.SkipNow()
 	}
@@ -184,11 +184,11 @@ func TestContract_PoolUsage(t *testing.T) {
 	ctx := t.Context()
 
 	apiRootURL := DefaultAPIRootURL
-	if os.Getenv("SAKURACLOUD_API_ROOT_URL") != "" {
-		apiRootURL = os.Getenv("SAKURACLOUD_API_ROOT_URL")
+	if os.Getenv("SAKURA_API_ROOT_URL") != "" {
+		apiRootURL = os.Getenv("SAKURA_API_ROOT_URL")
 	}
 
-	dedicatedStorageID, err := strconv.Atoi(os.Getenv("SAKURACLOUD_DEDICATED_STORAGE_ID"))
+	dedicatedStorageID, err := strconv.Atoi(os.Getenv("SAKURA_DEDICATED_STORAGE_ID"))
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -210,7 +210,7 @@ func TestContract_PoolUsage(t *testing.T) {
 }
 
 func TestContract_ListDiskSnapshots(t *testing.T) {
-	testutil.PreCheckEnvsFunc("SAKURACLOUD_ACCESS_TOKEN", "SAKURACLOUD_ACCESS_TOKEN_SECRET", "SAKURACLOUD_DEDICATED_STORAGE_ID")(t)
+	testutil.PreCheckEnvsFunc("SAKURA_ACCESS_TOKEN", "SAKURA_ACCESS_TOKEN_SECRET", "SAKURA_DEDICATED_STORAGE_ID")(t)
 	if os.Getenv("TESTACC") != "1" {
 		t.SkipNow()
 	}
@@ -218,11 +218,11 @@ func TestContract_ListDiskSnapshots(t *testing.T) {
 	ctx := t.Context()
 
 	apiRootURL := DefaultAPIRootURL
-	if os.Getenv("SAKURACLOUD_API_ROOT_URL") != "" {
-		apiRootURL = os.Getenv("SAKURACLOUD_API_ROOT_URL")
+	if os.Getenv("SAKURA_API_ROOT_URL") != "" {
+		apiRootURL = os.Getenv("SAKURA_API_ROOT_URL")
 	}
 
-	dedicatedStorageID, err := strconv.Atoi(os.Getenv("SAKURACLOUD_DEDICATED_STORAGE_ID"))
+	dedicatedStorageID, err := strconv.Atoi(os.Getenv("SAKURA_DEDICATED_STORAGE_ID"))
 	if err != nil {
 		t.Fatal(err)
 	}

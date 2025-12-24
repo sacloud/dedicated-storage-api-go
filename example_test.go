@@ -27,8 +27,8 @@ import (
 func Example_dedicatedStorageCRUDL() {
 	// setup
 	// TODO replace your access token/secret
-	os.Setenv("SAKURACLOUD_ACCESS_TOKEN", "your-token")  //nolint:errcheck,gosec
-	os.Setenv("SAKURACLOUD_ACCESS_TOKEN", "your-secret") //nolint:errcheck,gosec
+	os.Setenv("SAKURA_ACCESS_TOKEN", "your-token")  //nolint:errcheck,gosec
+	os.Setenv("SAKURA_ACCESS_TOKEN", "your-secret") //nolint:errcheck,gosec
 
 	theClient := saclient.Client{}
 	client, err := dedicatedstorage.NewClient(&theClient)
