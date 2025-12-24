@@ -20,7 +20,7 @@ import (
 )
 
 var (
-	Version  = "0.0.0"
+	Version  = "0.0.1"
 	Revision = "xxxxxx" // set on build time
 )
 
