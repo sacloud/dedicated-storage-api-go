@@ -4,3 +4,5 @@ dist/
 work/
 dedicated-storage-api-go
 CHANGELOG.md
+
+openapi/
