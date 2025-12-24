@@ -1,5 +1,9 @@
 # Changelog
 
+## [v0.0.2](https://github.com/sacloud/dedicated-storage-api-go/compare/v0.0.1...v0.0.2) - 2025-12-24
+- textlint: ignore CHANGELOG.md by @yamamoto-febc in https://github.com/sacloud/dedicated-storage-api-go/pull/13
+- set User-Agent by @yamamoto-febc in https://github.com/sacloud/dedicated-storage-api-go/pull/15
+
 ## [v0.0.1](https://github.com/sacloud/dedicated-storage-api-go/commits/v0.0.1) - 2025-12-24
 - ci: bump actions/checkout from 5.0.0 to 6.0.1 by @dependabot[bot] in https://github.com/sacloud/dedicated-storage-api-go/pull/2
 - ci: bump docker/metadata-action from 5.8.0 to 5.10.0 by @dependabot[bot] in https://github.com/sacloud/dedicated-storage-api-go/pull/3
