@@ -490,69 +490,6 @@ func (s *DedicatedStorageContractsListResponse) SetIsOk(val bool) {
 	s.IsOk = val
 }
 
-type DedicatedStorageContractsUpdateReq struct {
-	DedicatedStorageContract DedicatedStorageContractsUpdateReqDedicatedStorageContract `json:"DedicatedStorageContract"`
-}
-
-// GetDedicatedStorageContract returns the value of DedicatedStorageContract.
-func (s *DedicatedStorageContractsUpdateReq) GetDedicatedStorageContract() DedicatedStorageContractsUpdateReqDedicatedStorageContract {
-	return s.DedicatedStorageContract
-}
-
-// SetDedicatedStorageContract sets the value of DedicatedStorageContract.
-func (s *DedicatedStorageContractsUpdateReq) SetDedicatedStorageContract(val DedicatedStorageContractsUpdateReqDedicatedStorageContract) {
-	s.DedicatedStorageContract = val
-}
-
-type DedicatedStorageContractsUpdateReqDedicatedStorageContract struct {
-	Name        OptString                                                       `json:"Name"`
-	Description OptString                                                       `json:"Description"`
-	Tags        []string                                                        `json:"Tags"`
-	Icon        *DedicatedStorageContractsUpdateReqDedicatedStorageContractIcon `json:"Icon"`
-}
-
-// GetName returns the value of Name.
-func (s *DedicatedStorageContractsUpdateReqDedicatedStorageContract) GetName() OptString {
-	return s.Name
-}
-
-// GetDescription returns the value of Description.
-func (s *DedicatedStorageContractsUpdateReqDedicatedStorageContract) GetDescription() OptString {
-	return s.Description
-}
-
-// GetTags returns the value of Tags.
-func (s *DedicatedStorageContractsUpdateReqDedicatedStorageContract) GetTags() []string {
-	return s.Tags
-}
-
-// GetIcon returns the value of Icon.
-func (s *DedicatedStorageContractsUpdateReqDedicatedStorageContract) GetIcon() *DedicatedStorageContractsUpdateReqDedicatedStorageContractIcon {
-	return s.Icon
-}
-
-// SetName sets the value of Name.
-func (s *DedicatedStorageContractsUpdateReqDedicatedStorageContract) SetName(val OptString) {
-	s.Name = val
-}
-
-// SetDescription sets the value of Description.
-func (s *DedicatedStorageContractsUpdateReqDedicatedStorageContract) SetDescription(val OptString) {
-	s.Description = val
-}
-
-// SetTags sets the value of Tags.
-func (s *DedicatedStorageContractsUpdateReqDedicatedStorageContract) SetTags(val []string) {
-	s.Tags = val
-}
-
-// SetIcon sets the value of Icon.
-func (s *DedicatedStorageContractsUpdateReqDedicatedStorageContract) SetIcon(val *DedicatedStorageContractsUpdateReqDedicatedStorageContractIcon) {
-	s.Icon = val
-}
-
-type DedicatedStorageContractsUpdateReqDedicatedStorageContractIcon struct{}
-
 // Ref: #/components/schemas/Disk
 type Disk struct {
 	ID                  int64                `json:"ID"`
@@ -1780,6 +1717,68 @@ func (s *Storage) SetClass(val string) {
 // SetDedicated sets the value of Dedicated.
 func (s *Storage) SetDedicated(val bool) {
 	s.Dedicated = val
+}
+
+// Ref: #/components/schemas/UpdateDedicatedStorageContractRequest
+type UpdateDedicatedStorageContractRequest struct {
+	DedicatedStorageContract UpdateDedicatedStorageContractRequestDedicatedStorageContract `json:"DedicatedStorageContract"`
+}
+
+// GetDedicatedStorageContract returns the value of DedicatedStorageContract.
+func (s *UpdateDedicatedStorageContractRequest) GetDedicatedStorageContract() UpdateDedicatedStorageContractRequestDedicatedStorageContract {
+	return s.DedicatedStorageContract
+}
+
+// SetDedicatedStorageContract sets the value of DedicatedStorageContract.
+func (s *UpdateDedicatedStorageContractRequest) SetDedicatedStorageContract(val UpdateDedicatedStorageContractRequestDedicatedStorageContract) {
+	s.DedicatedStorageContract = val
+}
+
+type UpdateDedicatedStorageContractRequestDedicatedStorageContract struct {
+	Name        string     `json:"Name"`
+	Description string     `json:"Description"`
+	Tags        []string   `json:"Tags"`
+	Icon        OptNilIcon `json:"Icon"`
+}
+
+// GetName returns the value of Name.
+func (s *UpdateDedicatedStorageContractRequestDedicatedStorageContract) GetName() string {
+	return s.Name
+}
+
+// GetDescription returns the value of Description.
+func (s *UpdateDedicatedStorageContractRequestDedicatedStorageContract) GetDescription() string {
+	return s.Description
+}
+
+// GetTags returns the value of Tags.
+func (s *UpdateDedicatedStorageContractRequestDedicatedStorageContract) GetTags() []string {
+	return s.Tags
+}
+
+// GetIcon returns the value of Icon.
+func (s *UpdateDedicatedStorageContractRequestDedicatedStorageContract) GetIcon() OptNilIcon {
+	return s.Icon
+}
+
+// SetName sets the value of Name.
+func (s *UpdateDedicatedStorageContractRequestDedicatedStorageContract) SetName(val string) {
+	s.Name = val
+}
+
+// SetDescription sets the value of Description.
+func (s *UpdateDedicatedStorageContractRequestDedicatedStorageContract) SetDescription(val string) {
+	s.Description = val
+}
+
+// SetTags sets the value of Tags.
+func (s *UpdateDedicatedStorageContractRequestDedicatedStorageContract) SetTags(val []string) {
+	s.Tags = val
+}
+
+// SetIcon sets the value of Icon.
+func (s *UpdateDedicatedStorageContractRequestDedicatedStorageContract) SetIcon(val OptNilIcon) {
+	s.Icon = val
 }
 
 // Ref: #/components/schemas/UpdateSnapshotRequest

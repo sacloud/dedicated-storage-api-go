@@ -122,12 +122,12 @@ func TestContract_CRUDL(t *testing.T) {
 		{
 			name: "update",
 			test: func(t *testing.T) {
-				updated, err := contractOp.Update(ctx, targetStorage.ID, v1.DedicatedStorageContractsUpdateReq{
-					DedicatedStorageContract: v1.DedicatedStorageContractsUpdateReqDedicatedStorageContract{
-						Name:        v1.NewOptString(targetStorage.Name + "-updated"),
-						Description: v1.NewOptString(targetStorage.Description + "-updated"),
+				updated, err := contractOp.Update(ctx, targetStorage.ID, v1.UpdateDedicatedStorageContractRequest{
+					DedicatedStorageContract: v1.UpdateDedicatedStorageContractRequestDedicatedStorageContract{
+						Name:        targetStorage.Name + "-updated",
+						Description: targetStorage.Description + "-updated",
 						Tags:        []string{"tag1-updated", "tag2-updated"},
-						Icon:        nil,
+						Icon:        v1.OptNilIcon{},
 					},
 				})
 				if err != nil {

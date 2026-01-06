@@ -78,10 +78,10 @@ func Example_dedicatedStorageCRUDL() {
 	fmt.Println(listed)
 
 	// update
-	updated, err := contractOp.Update(ctx, created.ID, v1.DedicatedStorageContractsUpdateReq{
-		DedicatedStorageContract: v1.DedicatedStorageContractsUpdateReqDedicatedStorageContract{
-			Name:        v1.NewOptString("example-name-updated"),
-			Description: v1.NewOptString("example-description-updated"),
+	updated, err := contractOp.Update(ctx, created.ID, v1.UpdateDedicatedStorageContractRequest{
+		DedicatedStorageContract: v1.UpdateDedicatedStorageContractRequestDedicatedStorageContract{
+			Name:        "example-name-updated",
+			Description: "example-description-updated",
 			Tags:        []string{"example1", "example2"},
 		},
 	})

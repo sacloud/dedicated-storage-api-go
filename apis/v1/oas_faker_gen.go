@@ -287,50 +287,6 @@ func (s *DedicatedStorageContractsListResponse) SetFake() {
 }
 
 // SetFake set fake values.
-func (s *DedicatedStorageContractsUpdateReq) SetFake() {
-	{
-		{
-			s.DedicatedStorageContract.SetFake()
-		}
-	}
-}
-
-// SetFake set fake values.
-func (s *DedicatedStorageContractsUpdateReqDedicatedStorageContract) SetFake() {
-	{
-		{
-			s.Name.SetFake()
-		}
-	}
-	{
-		{
-			s.Description.SetFake()
-		}
-	}
-	{
-		{
-			s.Tags = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Tags = append(s.Tags, elem)
-			}
-		}
-	}
-	{
-		{ // Keep pointer nil to prevent infinite recursion.
-			s.Icon = nil
-		}
-	}
-}
-
-// SetFake set fake values.
-func (s *DedicatedStorageContractsUpdateReqDedicatedStorageContractIcon) SetFake() {
-}
-
-// SetFake set fake values.
 func (s *Disk) SetFake() {
 	{
 		{
@@ -783,6 +739,46 @@ func (s *Storage) SetFake() {
 	{
 		{
 			s.Dedicated = true
+		}
+	}
+}
+
+// SetFake set fake values.
+func (s *UpdateDedicatedStorageContractRequest) SetFake() {
+	{
+		{
+			s.DedicatedStorageContract.SetFake()
+		}
+	}
+}
+
+// SetFake set fake values.
+func (s *UpdateDedicatedStorageContractRequestDedicatedStorageContract) SetFake() {
+	{
+		{
+			s.Name = "string"
+		}
+	}
+	{
+		{
+			s.Description = "string"
+		}
+	}
+	{
+		{
+			s.Tags = nil
+			for i := 0; i < 0; i++ {
+				var elem string
+				{
+					elem = "string"
+				}
+				s.Tags = append(s.Tags, elem)
+			}
+		}
+	}
+	{
+		{
+			s.Icon.SetFake()
 		}
 	}
 }

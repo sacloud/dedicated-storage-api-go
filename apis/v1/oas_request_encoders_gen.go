@@ -39,7 +39,7 @@ func encodeDedicatedStorageContractsCreateRequest(
 }
 
 func encodeDedicatedStorageContractsUpdateRequest(
-	req *DedicatedStorageContractsUpdateReq,
+	req *UpdateDedicatedStorageContractRequest,
 	r *http.Request,
 ) error {
 	const contentType = "application/json"
