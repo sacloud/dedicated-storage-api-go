@@ -9,7 +9,7 @@ require (
 	github.com/go-faster/jx v1.2.0
 	github.com/ogen-go/ogen v1.18.0
 	github.com/sacloud/packages-go v0.0.12
-	github.com/sacloud/saclient-go v0.2.5-0.20251224021203-f6c92b75e9ab
+	github.com/sacloud/saclient-go v0.2.5
 	github.com/stretchr/testify v1.11.1
 )
 
