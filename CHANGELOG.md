@@ -1,5 +1,9 @@
 # Changelog
 
+## [v0.0.3](https://github.com/sacloud/dedicated-storage-api-go/compare/v0.0.2...v0.0.3) - 2026-01-06
+- Fix missing parameter definitions in ContractAPI.Update by @yamamoto-febc in https://github.com/sacloud/dedicated-storage-api-go/pull/18
+- go: bump github.com/sacloud/saclient-go from 0.2.5-0.20251224021203-f6c92b75e9ab to 0.2.5 by @dependabot[bot] in https://github.com/sacloud/dedicated-storage-api-go/pull/17
+
 ## [v0.0.2](https://github.com/sacloud/dedicated-storage-api-go/compare/v0.0.1...v0.0.2) - 2025-12-24
 - textlint: ignore CHANGELOG.md by @yamamoto-febc in https://github.com/sacloud/dedicated-storage-api-go/pull/13
 - set User-Agent by @yamamoto-febc in https://github.com/sacloud/dedicated-storage-api-go/pull/15
