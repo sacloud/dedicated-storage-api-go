@@ -75,7 +75,7 @@ type Invoker interface {
 	// IDおよびPlan.IDは更新できません。リクエストに含めても無視されます。.
 	//
 	// PUT /dedicatedstoragecontract/{id}
-	DedicatedStorageContractsUpdate(ctx context.Context, request *DedicatedStorageContractsUpdateReq, params DedicatedStorageContractsUpdateParams) (*DedicatedStorageContractResponse, error)
+	DedicatedStorageContractsUpdate(ctx context.Context, request *UpdateDedicatedStorageContractRequest, params DedicatedStorageContractsUpdateParams) (*DedicatedStorageContractResponse, error)
 	// DisksCreateSnapshot invokes Disks_createSnapshot operation.
 	//
 	// スナップショット作成.
@@ -463,12 +463,12 @@ func (c *Client) sendDedicatedStorageContractsPoolUsage(ctx context.Context, par
 // IDおよびPlan.IDは更新できません。リクエストに含めても無視されます。.
 //
 // PUT /dedicatedstoragecontract/{id}
-func (c *Client) DedicatedStorageContractsUpdate(ctx context.Context, request *DedicatedStorageContractsUpdateReq, params DedicatedStorageContractsUpdateParams) (*DedicatedStorageContractResponse, error) {
+func (c *Client) DedicatedStorageContractsUpdate(ctx context.Context, request *UpdateDedicatedStorageContractRequest, params DedicatedStorageContractsUpdateParams) (*DedicatedStorageContractResponse, error) {
 	res, err := c.sendDedicatedStorageContractsUpdate(ctx, request, params)
 	return res, err
 }
 
-func (c *Client) sendDedicatedStorageContractsUpdate(ctx context.Context, request *DedicatedStorageContractsUpdateReq, params DedicatedStorageContractsUpdateParams) (res *DedicatedStorageContractResponse, err error) {
+func (c *Client) sendDedicatedStorageContractsUpdate(ctx context.Context, request *UpdateDedicatedStorageContractRequest, params DedicatedStorageContractsUpdateParams) (res *DedicatedStorageContractResponse, err error) {
 
 	u := uri.Clone(c.requestURL(ctx))
 	var pathParts [2]string

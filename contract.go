@@ -25,7 +25,7 @@ type ContractAPI interface {
 	Create(ctx context.Context, request v1.CreateDedicatedStorageContractRequest) (*v1.DedicatedStorageContract, error)
 	List(ctx context.Context) (*v1.DedicatedStorageContractsListResponse, error)
 	Read(ctx context.Context, id int64) (*v1.DedicatedStorageContract, error)
-	Update(ctx context.Context, id int64, request v1.DedicatedStorageContractsUpdateReq) (*v1.DedicatedStorageContract, error)
+	Update(ctx context.Context, id int64, request v1.UpdateDedicatedStorageContractRequest) (*v1.DedicatedStorageContract, error)
 	Delete(ctx context.Context, id int64) error
 
 	PoolUsage(ctx context.Context, id int64) (*v1.PoolUsageResponsePoolUsage, error)
@@ -90,7 +90,7 @@ func (op *contractOp) Read(ctx context.Context, id int64) (*v1.DedicatedStorageC
 	return &res.DedicatedStorageContract, nil
 }
 
-func (op *contractOp) Update(ctx context.Context, id int64, request v1.DedicatedStorageContractsUpdateReq) (*v1.DedicatedStorageContract, error) {
+func (op *contractOp) Update(ctx context.Context, id int64, request v1.UpdateDedicatedStorageContractRequest) (*v1.DedicatedStorageContract, error) {
 	const methodName = "Contract.Update"
 
 	res, err := op.client.DedicatedStorageContractsUpdate(ctx, &request, v1.DedicatedStorageContractsUpdateParams{ID: id})

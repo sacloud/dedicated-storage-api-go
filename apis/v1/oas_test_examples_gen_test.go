@@ -168,42 +168,6 @@ func TestDedicatedStorageContractsListResponse_EncodeDecode(t *testing.T) {
 	var typ2 DedicatedStorageContractsListResponse
 	require.NoError(t, typ2.Decode(jx.DecodeBytes(data)))
 }
-func TestDedicatedStorageContractsUpdateReq_EncodeDecode(t *testing.T) {
-	var typ DedicatedStorageContractsUpdateReq
-	typ.SetFake()
-
-	e := jx.Encoder{}
-	typ.Encode(&e)
-	data := e.Bytes()
-	require.True(t, std.Valid(data), "Encoded: %s", data)
-
-	var typ2 DedicatedStorageContractsUpdateReq
-	require.NoError(t, typ2.Decode(jx.DecodeBytes(data)))
-}
-func TestDedicatedStorageContractsUpdateReqDedicatedStorageContract_EncodeDecode(t *testing.T) {
-	var typ DedicatedStorageContractsUpdateReqDedicatedStorageContract
-	typ.SetFake()
-
-	e := jx.Encoder{}
-	typ.Encode(&e)
-	data := e.Bytes()
-	require.True(t, std.Valid(data), "Encoded: %s", data)
-
-	var typ2 DedicatedStorageContractsUpdateReqDedicatedStorageContract
-	require.NoError(t, typ2.Decode(jx.DecodeBytes(data)))
-}
-func TestDedicatedStorageContractsUpdateReqDedicatedStorageContractIcon_EncodeDecode(t *testing.T) {
-	var typ DedicatedStorageContractsUpdateReqDedicatedStorageContractIcon
-	typ.SetFake()
-
-	e := jx.Encoder{}
-	typ.Encode(&e)
-	data := e.Bytes()
-	require.True(t, std.Valid(data), "Encoded: %s", data)
-
-	var typ2 DedicatedStorageContractsUpdateReqDedicatedStorageContractIcon
-	require.NoError(t, typ2.Decode(jx.DecodeBytes(data)))
-}
 func TestDisk_EncodeDecode(t *testing.T) {
 	var typ Disk
 	typ.SetFake()
@@ -418,6 +382,30 @@ func TestStorage_EncodeDecode(t *testing.T) {
 	require.True(t, std.Valid(data), "Encoded: %s", data)
 
 	var typ2 Storage
+	require.NoError(t, typ2.Decode(jx.DecodeBytes(data)))
+}
+func TestUpdateDedicatedStorageContractRequest_EncodeDecode(t *testing.T) {
+	var typ UpdateDedicatedStorageContractRequest
+	typ.SetFake()
+
+	e := jx.Encoder{}
+	typ.Encode(&e)
+	data := e.Bytes()
+	require.True(t, std.Valid(data), "Encoded: %s", data)
+
+	var typ2 UpdateDedicatedStorageContractRequest
+	require.NoError(t, typ2.Decode(jx.DecodeBytes(data)))
+}
+func TestUpdateDedicatedStorageContractRequestDedicatedStorageContract_EncodeDecode(t *testing.T) {
+	var typ UpdateDedicatedStorageContractRequestDedicatedStorageContract
+	typ.SetFake()
+
+	e := jx.Encoder{}
+	typ.Encode(&e)
+	data := e.Bytes()
+	require.True(t, std.Valid(data), "Encoded: %s", data)
+
+	var typ2 UpdateDedicatedStorageContractRequestDedicatedStorageContract
 	require.NoError(t, typ2.Decode(jx.DecodeBytes(data)))
 }
 func TestUpdateSnapshotRequest_EncodeDecode(t *testing.T) {
