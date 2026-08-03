@@ -1,5 +1,9 @@
 # Changelog
 
+## [v0.2.1](https://github.com/sacloud/dedicated-storage-api-go/compare/v0.2.0...v0.2.1) - 2026-08-03
+- Change the argument of NewClient to saclient.ClientAPI by @to-shoji in https://github.com/sacloud/dedicated-storage-api-go/pull/53
+- update README for repository transition by @shyouhei in https://github.com/sacloud/dedicated-storage-api-go/pull/59
+
 ## [v0.2.0](https://github.com/sacloud/dedicated-storage-api-go/compare/v0.1.0...v0.2.0) - 2026-03-23
 - Add endpoint setting from profile or env by @to-shoji in https://github.com/sacloud/dedicated-storage-api-go/pull/41
 - retrigger tagpr by @to-shoji in https://github.com/sacloud/dedicated-storage-api-go/pull/43
